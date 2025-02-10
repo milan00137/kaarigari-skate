@@ -20,7 +20,6 @@ export function ParallaxImage({ forgroundImage, backgroundImage, className }: Pr
     const currentPosition = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
-        const frameID = requestAnimationFrame(animationFrame);
 
         window.addEventListener('mousemove', onMouseMove)
 

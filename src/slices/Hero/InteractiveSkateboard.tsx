@@ -1,6 +1,6 @@
 'use client'
 import * as THREE from 'three';
-import { ContactShadows, Environment, OrbitControls, Html } from '@react-three/drei';
+import { ContactShadows, Environment, Html } from '@react-three/drei';
 import { Canvas, ThreeEvent, useThree } from '@react-three/fiber';
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { SkateboardModel } from '@/app/components/SkateBoards';

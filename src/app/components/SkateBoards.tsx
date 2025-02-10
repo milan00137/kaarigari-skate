@@ -34,13 +34,13 @@ type GLTFResult = GLTF & {
     Truck1: THREE.Mesh
     Truck2: THREE.Mesh
   }
-  materials: {}
+  materials: object
 }
 
 export function SkateboardModel({wheelTextureURL, wheelTextureURLs, deckTextureURL, deckTextureURLs, boltColor, truckColor, constantWheelSpin, pose="upright"}: skateboardProps) {
 
   const wheelRefs = useRef<THREE.Object3D[]>([]);
-  const { nodes, materials } = useGLTF('/skateboard.gltf') as GLTFResult
+  const { nodes } = useGLTF('/skateboard.gltf') as GLTFResult
 
   // Wheel Textures
   const wheelTextures = useTexture(wheelTextureURLs);
