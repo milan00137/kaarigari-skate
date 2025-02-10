@@ -21,6 +21,7 @@ export function ParallaxImage({ forgroundImage, backgroundImage, className }: Pr
 
     useEffect(() => {
 
+        const frameId = requestAnimationFrame(animationFrame);
         window.addEventListener('mousemove', onMouseMove)
 
         function onMouseMove(event: MouseEvent) {
@@ -52,7 +53,7 @@ export function ParallaxImage({ forgroundImage, backgroundImage, className }: Pr
             }
 
             if (foregroundRef.current) {
-                foregroundRef.current.style.transform = `translateX(${newX*2.5}px) translateY(${newY*2.5}px)`;
+                foregroundRef.current.style.transform = `translateX(${newX * 2.5}px) translateY(${newY * 2.5}px)`;
 
             }
 
@@ -61,6 +62,7 @@ export function ParallaxImage({ forgroundImage, backgroundImage, className }: Pr
 
         return () => {
             window.removeEventListener('mousemove', onMouseMove)
+            cancelAnimationFrame(frameId);
         }
 
 
