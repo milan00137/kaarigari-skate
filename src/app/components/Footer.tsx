@@ -41,7 +41,7 @@ export async function Footer() {
           ))}
         </ul>
       </Bounded>
-      {/* List of links */}
+        <p className="text-center relative bottom-10">"🌟💻 Infused with love & innovation, by Milan at Code Kaarigari — where every pixel tells a story❤️"</p>
     </footer>
   );
 }
