@@ -3,6 +3,7 @@ import { Bowlby_One_SC, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SVGFilters } from "./components/SVGFIlters";
 import { createClient } from "@/prismicio";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 const bolby = Bowlby_One_SC({
@@ -47,6 +48,7 @@ export default function RootLayout({
         </main>
         <SVGFilters />
       </body>
+      <GoogleAnalytics gaId="G-6745H9WXYT" />
     </html>
   );
 }
